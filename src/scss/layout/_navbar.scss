@@ -1,0 +1,60 @@
+.navcontainer {
+  max-width: 1280px;
+  width: 100%;
+  background-color: #F2F2F2;
+  position: fixed;
+  height: 50px;
+
+}
+
+ul {
+  width: 50%;
+  list-style-type: none;
+  margin: 0;
+  float: left;
+  overflow: hidden;
+  padding: 0;
+}
+
+
+
+.navcontainer li {
+  list-style-type: none;
+  padding: 17px;
+
+}
+
+
+
+li a {
+  font-size: 13px;
+  text-align: center;
+  text-decoration: none;
+  color: #707070;
+  font-weight: bold;
+}
+
+.left {
+  float: right;
+  padding-right: 20px;
+}
+
+.right {
+  float: left;
+  padding-left: 20px;
+}
+
+
+
+
+
+
+.navcontainer:before {
+  height: 50px;
+  width: 1000%;
+  left: -500%;
+  position: absolute;
+  background-color: #F2F2F2;
+  content: ' ';
+  z-index: -1;
+}

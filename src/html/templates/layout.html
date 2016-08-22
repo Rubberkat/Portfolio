@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>{% block title %} {% endblock %}</title>
-    <link rel="stylesheet" href="dist/main.css">
+    <link rel="stylesheet" href="../dist/main.css">
 </head>
 <body>
 
+<div class="container">
+
+    {% include "menu.html" %}
+    {% block content %}
 
 
-{% block content %}
-{% endblock %}
 
+    {% endblock %}
+</div>
 
 </body>
 </html>

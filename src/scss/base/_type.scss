@@ -1,4 +1,4 @@
-$default-font: 'Helvetica';
+$default-font: "Helvetica";
 
 body {
   font-family: $default-font;
@@ -28,5 +28,16 @@ p {
   }
 }
 
+h1 {
+  font-size: 45px;
+  color:white;
+}
 
 
+$pcolor: white;
+
+
+p {
+  color: white;
+  opacity: 0.6;
+}
