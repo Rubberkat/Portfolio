@@ -5,49 +5,53 @@
   position: fixed;
   height: 50px;
 
-}
+  ul {
+    position: relative;
+    width: 50%;
+    list-style-type: none;
+    margin: 0;
+    float: left;
+    overflow: hidden;
+    padding: 0;
+    @media #{$small-only} {
+      display: none;
+    }
+  }
 
-ul {
-  width: 50%;
-  list-style-type: none;
-  margin: 0;
-  float: left;
-  overflow: hidden;
-  padding: 0;
-}
+  li {
 
+    list-style-type: none;
+    padding: 15px 12px 12px 15px;
 
+  }
 
-.navcontainer li {
-  list-style-type: none;
-  padding: 17px;
+  li a {
 
-}
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+    color: #707070;
+    font-weight: bold;
+    letter-spacing: 2px;
 
-
-
-li a {
-  font-size: 13px;
-  text-align: center;
-  text-decoration: none;
-  color: #707070;
-  font-weight: bold;
+  }
 }
 
 .left {
   float: right;
-  padding-right: 20px;
+
+  &:first-child {
+    padding-right: 40px;
+  }
 }
 
 .right {
   float: left;
-  padding-left: 20px;
+
+  &:first-child {
+    padding-left: 40px;
+  }
 }
-
-
-
-
-
 
 .navcontainer:before {
   height: 50px;
@@ -57,4 +61,27 @@ li a {
   background-color: #F2F2F2;
   content: ' ';
   z-index: -1;
+}
+
+.logo {
+  text-decoration: none;
+  padding-top: 10px;
+  width: 100%;
+  position: absolute;
+
+  font-family: "Snell Roundhand";
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+  @media #{$medium-up} {
+    text-align: center;
+  }
+  @media#{$small-only} {
+    float: left;
+    padding-left:30px;
+  }
+}
+
+.burger {
+  
 }

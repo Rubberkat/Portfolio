@@ -2,19 +2,20 @@
   @include row();
   .block {
     height:50vh;
-    //width:200px;
+    padding: 50px 30px 50px 30px;
     background-color: #333333;
     z-index:-1;
-    width:100vw;
-    padding:100px 30px 100px 30px;
-    //@media#{$medium-up} {
-    //  @include column(12);
-    //  height:50vh;
-    //}
+
+    @media #{$small-only} {
+      &:first-child{
+        padding-top:80px;
+      }
+    }
+
     @media #{$medium-up} {
       @include column(3);
       height:100vh;
-
+      padding:100px 30px 100px 30px;
     }
   }
 }
