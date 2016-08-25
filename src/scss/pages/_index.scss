@@ -11,8 +11,11 @@
         padding-top:80px;
       }
     }
-
     @media #{$medium-up} {
+      @include column(6);
+      height:50vh;
+    }
+    @media #{$large-up} {
       @include column(3);
       height:100vh;
       padding:100px 30px 100px 30px;
