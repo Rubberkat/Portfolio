@@ -4,7 +4,9 @@
   background-color: #F2F2F2;
   position: fixed;
   height: 50px;
-
+  @media #{$small-only} {
+    position: fixed;
+  }
   ul {
     position: relative;
     width: 50%;
@@ -79,7 +81,7 @@
   }
   @media #{$medium-up} {
     text-align: center;
-    z-index:-1;
+    z-index: -1;
   }
   @media#{$small-only} {
     float: left;
@@ -89,21 +91,35 @@
 }
 
 .burgercontainer.active .burger {
-  float:right;
+  float: right;
 
 }
 
-
-.burgercontainer.active .burgercontent{
-
-  width:200px;
-  margin-top:11px;
-  max-height: 500px;
+.burgercontainer.active .burgercontent {
+  position: relative;
+  left: 80px;
+  float: left;
+  margin-top: 6px;
+  max-height: 100vh;
+  height: 100vh;
   display: block;
+  width: 100vw;
+  margin-right: 50px;
 
-  margin-right:50px;
+  li {
 
+  }
 }
+
+//.burgercontainer html, body {
+//  overflow: auto;
+//  height: auto;
+//}
+//
+//.burgercontainer.active html, body {
+//  overflow: hidden;
+//  height: 100%;
+//}
 
 .burgercontainer {
 
@@ -124,7 +140,7 @@
 
 
 .burgercontent {
-  max-height:0;
+  max-height: 0;
   overflow: hidden;
   background: white;
 
