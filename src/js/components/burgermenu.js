@@ -15,12 +15,12 @@ $(function() {
 
 
             return false;
-
-        } if (!$parent.hasClass('active')) {
-            // $('html, body').css({
-            //     'overflow': 'auto',
-            //     'height': 'auto'
-            // });
+        //
+        // } if (!$parent.hasClass('active')) {
+        //     // $('html, body').css({
+        //     //     'overflow': 'auto',
+        //     //     'height': 'auto'
+        //     // });
         }
 
 

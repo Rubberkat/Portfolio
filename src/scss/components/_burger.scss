@@ -1,0 +1,45 @@
+.burger-container {
+  @media #{$small-only}  {
+    float: right;
+    font-size: 30px;
+    z-index: 500;
+  }
+  @media #{$medium-up} {
+    display: none;
+  }
+}
+
+.burger {
+  margin:0 30px 10px 30px;
+  float: right;
+}
+
+.burger-content {
+  margin-top: 50px;
+  position: absolute;
+  right: -100%;
+  padding-left: 30px;
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  background: white;
+  @include transition(all 0.2s ease-in);
+}
+
+.burger-container.active .burger-content {
+  margin-top: 50px;
+  right: 0;
+}
+
+.burgeritem {
+  padding-top:20px;
+  list-style-type: none;
+}
+
+.burgeritem a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #707070;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
