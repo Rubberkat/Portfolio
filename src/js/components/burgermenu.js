@@ -8,24 +8,24 @@ $(function() {
 
         if ($parent.hasClass('active')) {
             $parent.removeClass('active');
-            $('html, body').css({
-                'overflow': 'hidden',
-                'height': '100%'
-            });
+            // $('html, body').css({
+            //     'overflow': 'hidden',
+            //     'height': '100%'
+            // });
 
 
             return false;
 
         } if (!$parent.hasClass('active')) {
-            $('html, body').css({
-                'overflow': 'auto',
-                'height': 'auto'
-            });
+            // $('html, body').css({
+            //     'overflow': 'auto',
+            //     'height': 'auto'
+            // });
         }
 
 
 
-        $('.burgercontainer').removeClass('active');
+        $('.burger-container').removeClass('active');
         $parent.addClass('active');
 
     });
