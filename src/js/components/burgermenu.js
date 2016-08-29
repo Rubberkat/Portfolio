@@ -8,19 +8,9 @@ $(function() {
 
         if ($parent.hasClass('active')) {
             $parent.removeClass('active');
-            // $('html, body').css({
-            //     'overflow': 'hidden',
-            //     'height': '100%'
-            // });
-
 
             return false;
-        //
-        // } if (!$parent.hasClass('active')) {
-        //     // $('html, body').css({
-        //     //     'overflow': 'auto',
-        //     //     'height': 'auto'
-        //     // });
+
         }
 
 
