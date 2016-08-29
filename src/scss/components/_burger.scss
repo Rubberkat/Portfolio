@@ -10,14 +10,24 @@
 }
 
 .burger {
-  margin:0 30px 10px 30px;
+  content: '☰';
+  margin:3px 30px 10px 30px;
   float: right;
+  cursor:pointer;
+  display: block;
+}
+
+
+.burger-container.active .burger {
+  content: 'X';
+  display: block;
+
 }
 
 .burger-content {
   margin-top: 50px;
   position: absolute;
-  right: -100%;
+  right: -200%;
   padding-left: 30px;
   display: block;
   height: 100vh;

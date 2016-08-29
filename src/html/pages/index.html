@@ -6,36 +6,42 @@
 {#Add the content of the page in the block content#}
 {% block content %}
     <div class="row">
-        <div class="block-container">
+        <div class="block-background">
+            <div class="block-container">
+                <div class="block-opacity">
+                    <div class="block block-1">
+                        <h1>About</h1>
+                        <p>
 
-            <div class="block" style="background-color: #228DB2">
-                <h1>About</h1>
-                <p>
-                    Hey there! My name is Roy de Jager. If you want I can tell more about me? Click on me to hear more.
-                </p>
+                            Hey there! My name is Roy de Jager. If you want I can tell more about me? Click on me to
+                            hear
+                            more.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="block" style="background-color: #43C085">
-                <h1>Contact </h1>
-                <p>
-                    Liked what you saw? If you want I can tell you how to contact me. Click on me to see how.
-                </p>
+
+            <div class="block-container">
+                <div class="block block-2">
+                    <h1>Contact </h1>
+                    <p>
+                        Liked what you saw? If you want I can tell you how to contact me. Click on me to see how.
+                    </p>
+                </div>
             </div>
-            <div class="block" style="background-color: #E2B600">
-                <h1>Works</h1>
-                <p>
-                    Quaerat quam sint tempore temporibus voluptatum! Kekrbwek erenkenf werkfjnwef wekfnwe.
-                </p>
-            </div>
-            <div class="block" style="background-color: #E3623D">
-                <h1>
-                    Nogiets
-                </h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </p>
+
+            <div class="block-container">
+                <div class="block block-3">
+                    <h1>
+                        Nogiets
+                    </h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
+                </div>
+
             </div>
         </div>
     </div>
-{% endblock %}
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequatur eveniet quam unde voluptatibus. Accusantium aspernatur, doloribus dolorum, facilis hic nobis nulla odit placeat, quaerat quam sint tempore temporibus voluptatum!
+{% endblock %}
