@@ -10,9 +10,13 @@ $(function() {
             $parent.removeClass('active');
 
             return false;
+
         }
+
+
 
         $('.burger-container').removeClass('active');
         $parent.addClass('active');
+
     });
 });
