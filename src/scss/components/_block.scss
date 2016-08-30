@@ -120,6 +120,8 @@
   }
 }
 
+
+
 .block.block-1, .block.block-2, .block.block-3{
   ::after {
     content: " ";
@@ -129,8 +131,6 @@
     position: absolute;
     right: 93%;
     z-index: -1;
-
-
     visibility: hidden;
     @include transition(all 0.5s ease-in);
   }
@@ -143,7 +143,6 @@
     position: absolute;
     left: 93%;
     z-index: -1;
-
     visibility: hidden;
     @include transition(all 0.5s ease-in);
   }
@@ -155,21 +154,16 @@
     background-color: #3E64CF;
   }
 }
-
 .block-container.block-hover .block.block-1 {
   ::before {
-    content: " ";
-    top: 0;
-    width: 30px;
-    height: 100%;
     background-color: #3E64CF;
-    position: absolute;
     left: 100%;
     z-index: 300;
     visibility: visible;
     @include transition(all 0.5s ease-in);
   }
 }
+
 
 .block.block-2 {
   background-color: #3CC06C;
@@ -180,35 +174,24 @@
     background-color: #3CC06C;
   }
 }
-
 .block-container.block-hover .block.block-2 {
   ::after {
-    content: " ";
-    top: 0;
-    width: 30px;
-    height: 100%;
     background-color: #3CC06C;
-    position: absolute;
     right: 100%;
-    z-index: 400;
+    z-index: 300;
     visibility: visible;
     @include transition(all 0.5s ease-in);
   }
   ::before {
 
-    content: " ";
-    top: 0;
-    width: 30px;
-    height: 100%;
     background-color: #3CC06C;
-    position: absolute;
     left: 100%;
-    z-index: 400;
+    z-index: 300;
     visibility: visible;
     @include transition(all 0.5s ease-in);
-
   }
 }
+
 
 .block.block-3 {
   background-color: #E36331;
@@ -219,19 +202,12 @@
     background-color: #E36331;
   }
 }
-
 .block-container.block-hover .block.block-3 {
   ::after {
-    content: " ";
-    top: 0;
-    width: 30px;
-    height: 100%;
     background-color: #E36331;
-    position: absolute;
     right: 100%;
     z-index: 300;
     visibility: visible;
-    display: block;
     @include transition(all 0.5s ease-in);
   }
 }
