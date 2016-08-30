@@ -16,52 +16,61 @@
       @include column(4);
       height: 100vh;
       padding: 100px 30px 100px 30px;
+      p {
+        opacity: 0.4;
+        @include transition(all 0.2s ease-in);
+      }
+    }
 
-    }
-    p {
-      opacity: 0.4;
-      @include transition(all 0.2s ease-in);
-    }
   }
 }
 
 .block-container.block-hover .block {
   cursor: pointer;
-  @include transition(all 0.2s ease-in);
-  p {
-    opacity: 1;
+  @media #{$medium-up} {
     @include transition(all 0.2s ease-in);
+    p {
+      opacity: 1;
+      @include transition(all 0.2s ease-in);
+    }
   }
 }
 
-.block:before{
-  content: " ";
-  left:0;
-  right:0;
-  bottom:0;
-  width:100%;
-  height:100%;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.0);
-  @include transition(all 0.2s ease-in);
+.block:before {
+  @media #{$medium-up} {
+    content: " ";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.0);
+    @include transition(all 0.2s ease-in);
+  }
 }
 
 .block-container.no-hover .block {
-  p {
-    opacity: 0.07;
-    @include transition(all 0.2s ease-in);
+  @media #{$medium-up} {
+    p {
+      opacity: 0.07;
+      @include transition(all 0.2s ease-in);
+    }
   }
 }
+
 .block-container.no-hover .block:before {
-  content: " ";
-  left:0;
-  right:0;
-  bottom:0;
-  width:100%;
-  height:100%;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.4);
-  @include transition(all 0.2s ease-in);
+  @media #{$medium-up} {
+    content: " ";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    @include transition(all 0.2s ease-in);
+  }
 }
 
 .block.block-1 {
