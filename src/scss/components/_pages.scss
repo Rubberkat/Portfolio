@@ -1,4 +1,28 @@
-.block-container.active {
-  width: 100vh;
-  background-color: black;
+.block-container {
+  position: relative;
+  //display: inline-block;
+  overflow: visible;
+}
+
+.block-container.active .block {
+  //content: " ";
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  z-index: 400;
+  @include transition(all 1s ease-in);
+
+  @media #{$medium-up} {
+    //position: absolute;
+  }
+
+  .block-container.hidden .block {
+    @media #{$medium-up} {
+      //display: none;
+      z-index: -1;
+      display: inline-block;
+      //position: absolute;
+
+    }
+  }
 }

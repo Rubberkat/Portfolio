@@ -1,20 +1,26 @@
-.block.block-1 {background-color: $color-block-1;}
-.block.block-2 {background-color: $color-block-2;}
-.block.block-3 {background-color: $color-block-3;}
-.block.block-4 {background-color: $color-block-4;}
+.block.block-1 {
+  background-color: $color-block-1;
+}
 
+.block.block-2 {
+  background-color: $color-block-2;
+}
+
+.block.block-3 {
+  background-color: $color-block-3;
+}
+
+.block.block-4 {
+  background-color: $color-block-4;
+}
 
 .row {
   @include row();
   .block {
     position: relative;
     height: 50vh;
-    padding: 50px 30px 50px 30px;
-
     @media #{$small-only} {
-      &:first-child {
-        padding-top: 80px;
-      }
+      padding: 50px 30px 50px 30px;
     }
     @media #{$medium-up} {
       @include column(3);
@@ -24,6 +30,16 @@
         opacity: 0.4;
         @include transition(all 0.2s ease-in);
       }
+      .bottom-text {
+        padding-bottom: 50px;
+        bottom: 0;
+        position: absolute;
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+        opacity: 0.4;
+      }
+
     }
 
   }
@@ -33,22 +49,22 @@
   cursor: pointer;
   @media #{$medium-up} {
     @include transition(all 0.2s ease-in);
-    p {
+    p, .bottom-text {
       opacity: 1;
       @include transition(all 0.2s ease-in);
     }
+
   }
 }
 
 .block-container.no-hover .block {
   @media #{$medium-up} {
-    p {
+    p, .bottom-text {
       opacity: 0.07;
       @include transition(all 0.2s ease-in);
     }
   }
 }
-
 
 .block:before {
   @media #{$medium-up} {
@@ -71,3 +87,11 @@
   }
 }
 
+.bottom-text {
+  padding-bottom: 50px;
+  bottom: 0;
+  position: absolute;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
