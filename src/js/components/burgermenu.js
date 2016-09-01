@@ -19,7 +19,7 @@ $("#works").click(function () {
     $('.burger-container').removeClass('active');
     $('html, body').animate({
         scrollTop: $(" .block.block-2").offset().top -40
-    }, 1000);
+    }, 500);
 });
 
 $("#contact").click(function () {
@@ -27,7 +27,7 @@ $("#contact").click(function () {
     $('.burger-container').removeClass('active');
     $('html, body').animate({
         scrollTop: $(" .block.block-4").offset().top -40
-    }, 1000);
+    }, 500);
 });
 
 $("#about").click(function () {
@@ -35,7 +35,7 @@ $("#about").click(function () {
     $('.burger-container').removeClass('active');
     $('html, body').animate({
         scrollTop: $(" .block.block-1").offset().top -40
-    }, 1000);
+    }, 500);
 });
 
 $("#skills").click(function () {
@@ -43,7 +43,7 @@ $("#skills").click(function () {
     $('.burger-container').removeClass('active');
     $('html, body').animate({
         scrollTop: $(" .block.block-3").offset().top -40
-    }, 1000);
+    }, 500);
 });
 
 
