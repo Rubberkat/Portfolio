@@ -1,28 +1,32 @@
 .block-container {
   position: relative;
   //display: inline-block;
-  overflow: visible;
+  max-width: 1920px;
+  //overflow: visible;
 }
 
 .block-container.active .block {
   //content: " ";
-  position: absolute;
+  //
+  //position: absolute;
+  float:left;
   display: inline-block;
   width: 100%;
-  z-index: 400;
-  @include transition(all 1s ease-in);
+  @include transition(all 0.4s ease-in);
 
   @media #{$medium-up} {
     //position: absolute;
   }
+}
 
-  .block-container.hidden .block {
-    @media #{$medium-up} {
-      //display: none;
-      z-index: -1;
-      display: inline-block;
-      //position: absolute;
+.block-container.hidden .block {
+  @media #{$medium-up} {
+    //display: none;
 
-    }
+    float:left;
+    display: inline-block;
+    //position: absolute;
+
+
   }
 }
