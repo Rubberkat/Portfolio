@@ -32,9 +32,11 @@
         visibility: visible;
         z-index: 400;
         opacity: 0.4;
-        @include transition(all 0.2s ease-in);
-      }
 
+      }
+      h1 {
+        opacity: 1;
+      }
     }
     .bottom-text {
       padding-bottom: 50px;
@@ -45,6 +47,7 @@
       color: white;
       opacity: 0.4;
       visibility: visible;
+      @include transition(all 0.8s ease-in);
     }
   }
 }
@@ -97,7 +100,6 @@
   width: 100%;
   height: 100vh;
   left: 0;
-
   @include transition(all 0.2s ease-in);
   z-index: 400;
   @media #{$medium-up} {
@@ -106,11 +108,16 @@
 }
 
 .block-container.active .block p {
-  visibility: hidden;
-  @include transition(all 0.8s ease-in);
+  display: none;
+
+}
+
+.block-container.active .block h1 {
+  display: none;
+
 }
 
 .block-container.active .bottom-text {
-  visibility: hidden;
-  @include transition(all 0.8s ease-in);
+  display: none;
 }
+
