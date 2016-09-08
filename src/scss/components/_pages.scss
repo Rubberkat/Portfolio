@@ -28,11 +28,10 @@
   @include transition(all 0.2s ease-in);
 }
 
-.close-button {
-  cursor: pointer;
-}
-.close-button svg {
 
+
+.close-button svg {
+  fill:#D9D9D9;
   position: relative;
   margin-top: 20px;
   margin-right: 20px;
@@ -41,9 +40,14 @@
   float: right;
   cursor: pointer;
   z-index: 10000;
-
-
-  &:active {
-    fill: blue;
+  @include transition(all 0.3s ease-in);
+  &:hover {
+    @include transition(all 0.3s ease-in);
+    @include transform(rotate(180deg));
+    fill: #424242;
+    stroke: #424242;
+    stroke-width: 10;
   }
 }
+
+
