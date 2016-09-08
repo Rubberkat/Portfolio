@@ -26,7 +26,6 @@
       @include column(3);
       height: 100vh;
       padding: 100px 30px 100px 30px;
-
       position: absolute;
       z-index: -1;
       p {
@@ -121,5 +120,4 @@
 .block-container.active .bottom-text {
   display: none;
 }
-
 
