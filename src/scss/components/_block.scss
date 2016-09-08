@@ -28,6 +28,7 @@
       padding: 100px 30px 100px 30px;
       position: absolute;
       z-index: -1;
+      @include transition(all 0.2s ease-in);
       p {
         visibility: visible;
         z-index: 400;
@@ -89,6 +90,11 @@
   }
 }
 
+.block-container.active {
+  z-index: -200;
+  pointer-events: none;
+}
+
 .block-container.no-hover .block:before {
   @media #{$medium-up} {
     background: rgba(0, 0, 0, 0.4);
@@ -100,12 +106,14 @@
   width: 100%;
   height: 100vh;
   left: 0;
+  z-index: 50;
   @include transition(all 0.2s ease-in);
-  z-index: 400;
+
   @media #{$medium-up} {
 
   }
 }
+
 
 .block-container.active .block p {
   display: none;
