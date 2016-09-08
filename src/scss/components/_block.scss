@@ -28,28 +28,26 @@
       padding: 100px 30px 100px 30px;
       position: absolute;
       z-index: -1;
-      @include transition(all 0.2s ease-in);
+      @include transition(all 0.3s ease-in);
       p {
-        visibility: visible;
-        z-index: 400;
         opacity: 0.4;
-
       }
       h1 {
         opacity: 1;
       }
+      .bottom-text {
+        padding-bottom: 50px;
+        bottom: 0;
+        position: absolute;
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+        opacity: 0.4;
+        visibility: visible;
+        @include transition(all 0.3s ease-in);
+      }
     }
-    .bottom-text {
-      padding-bottom: 50px;
-      bottom: 0;
-      position: absolute;
-      font-size: 14px;
-      font-weight: bold;
-      color: white;
-      opacity: 0.4;
-      visibility: visible;
-      @include transition(all 0.8s ease-in);
-    }
+
   }
 }
 
@@ -90,10 +88,6 @@
   }
 }
 
-.block-container.active {
-  z-index: -200;
-  pointer-events: none;
-}
 
 .block-container.no-hover .block:before {
   @media #{$medium-up} {
@@ -107,25 +101,12 @@
   height: 100vh;
   left: 0;
   z-index: 50;
-  @include transition(all 0.2s ease-in);
+  @include transition(all 0.3s ease-in);
 
-  @media #{$medium-up} {
-
+  p, h1, .bottom-text {
+    display: none;
   }
 }
 
 
-.block-container.active .block p {
-  display: none;
-
-}
-
-.block-container.active .block h1 {
-  display: none;
-
-}
-
-.block-container.active .bottom-text {
-  display: none;
-}
 

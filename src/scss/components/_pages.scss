@@ -4,48 +4,46 @@
   height: 100vh;
   visibility: hidden;
   opacity: 0;
-  padding: 200px 20px 0 20px;
+  padding: 300px 30px 0px 30px;
   z-index: 1000;
   position: absolute;
-  @include transition(all 0.2s ease-in);
+  @include transition(all 0.3s ease-in);
 }
 
 .white-page {
-  z-index: 1000;
   width: 100%;
   height: 100%;
-  background-color: white;
-  @include transition(all 0.2s ease-in);
+  background-color: #F2F2F2;
+  z-index: 1000;
+  @include transition(all 0.3s ease-in);
 }
 
 .page-container.active {
+  padding-top:80px;
   visibility: visible;
   opacity: 1;
   display: inline-block;
   z-index: 1000;
   position: relative;
-  padding-top: 80px;
-  @include transition(all 0.2s ease-in);
+  @include transition(all 0.3s ease-in);
 }
 
-
-
 .close-button svg {
-  fill:#D9D9D9;
+  fill: #D9D9D9;
   position: relative;
-  margin-top: 20px;
-  margin-right: 20px;
-  width: 50px;
-  height: 50px;
+  margin-top: 30px;
+  margin-right: 30px;
+  width: 60px;
+  height: 60px;
   float: right;
   cursor: pointer;
   z-index: 10000;
-  @include transition(all 0.3s ease-in);
+  @include transition(all 0.2s ease-in);
   &:hover {
-    @include transition(all 0.3s ease-in);
+    @include transition(all 0.2s ease-in);
     @include transform(rotate(180deg));
-    fill: #424242;
-    stroke: #424242;
+    fill: #707070;
+    stroke: #707070;
     stroke-width: 10;
   }
 }
