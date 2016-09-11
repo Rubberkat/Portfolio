@@ -1,6 +1,6 @@
 var $ = require('jquery');
 
-$('.close-button').click(function () {
+$('.close-button svg').click(function () {
     $('.block-container').removeClass('active');
     $('.page-container').removeClass('active');
 });
