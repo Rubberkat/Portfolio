@@ -16,6 +16,7 @@ $('.burger').click(function () {
 
 $("#works").click(function () {
     // var id =  $(this).attr('href');
+    $('#block-2').parent().addClass('active');
     $('.burger-container').removeClass('active');
     $('html, body').animate({
         scrollTop: $(" .block.block-2").offset().top - 40
@@ -26,6 +27,7 @@ $("#works").click(function () {
 
 $("#contact").click(function () {
     // var id =  $(this).attr('href');
+    $('.block-container').addClass('active');
     $('.burger-container').removeClass('active');
     $('html, body').animate({
         scrollTop: $(" .block.block-4").offset().top - 40
@@ -36,6 +38,7 @@ $("#contact").click(function () {
 
 $("#about").click(function () {
     // var id =  $(this).attr('href');
+    $('.block-container').addClass('active');
     $('.burger-container').removeClass('active');
     $('html, body').animate({
         scrollTop: $(" .block.block-1").offset().top - 40
@@ -46,6 +49,7 @@ $("#about").click(function () {
 
 $("#skills").click(function () {
     // var id =  $(this).attr('href');
+    $('.block-container').addClass('active');
     $('.burger-container').removeClass('active');
     $('html, body').animate({
         scrollTop: $(" .block.block-3").offset().top - 40

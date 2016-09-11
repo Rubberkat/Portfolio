@@ -13,3 +13,8 @@ body {
   background-color: white;
 }
 
+.top {
+  @media #{$small-only} {
+    padding-top: 50px;
+  }
+}
