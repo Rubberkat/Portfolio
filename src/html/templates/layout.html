@@ -6,14 +6,13 @@
     <title>{% block title %} {% endblock %}</title>
     <link rel="icon" type="image/png" href="../src/images/favicon.png">
     <link rel="stylesheet" href="../dist/main.css">
-    {#<script type="text/javascript" src="/node_modules/jquery/dist/jquery.js"></script>#}
 </head>
 <body>
 
 <div class="container">
+    {% include "partials/menu.html" %}
 
-    {% include "menu.html" %}
-
+    <div class="top">
         {% block content %}
 
 
@@ -21,6 +20,7 @@
 
         {% endblock %}
     </div>
+</div>
 
 
 </body>

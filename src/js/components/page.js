@@ -6,11 +6,12 @@ $('.block').click(function () {
     if ($parent.hasClass('active')) {
         $parent.addClass('active');
 
+
         return false;
     }
 
     $('.block-container').removeClass('active').addClass('hidden');
-    $('.page-container').addClass('active');
     $parent.addClass('active');
     $parent.removeClass('hidden');
 });
+
