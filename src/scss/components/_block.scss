@@ -22,6 +22,7 @@
     @media #{$small-only} {
       padding: 30px 30px 50px 30px;
       height: 50vh;
+      @include transition(all 0.2s ease-in);
     }
     @media #{$medium-up} {
       @include column(3);
