@@ -13,6 +13,14 @@ $('.burger').click(function () {
     $parent.addClass('active');
 });
 
+$("#about").click(function () {
+    // var id =  $(this).attr('href');
+    $('#block-1').parent().addClass('active');
+    $('.burger-container').removeClass('active');
+    $('html, body').animate({
+        scrollTop: $(" .block.block-1").offset().top - 40
+    }, 500);
+});
 
 $("#works").click(function () {
     // var id =  $(this).attr('href');
@@ -22,41 +30,29 @@ $("#works").click(function () {
         scrollTop: $(" .block.block-2").offset().top - 40
 
     }, 500);
-
-});
-
-$("#contact").click(function () {
-    // var id =  $(this).attr('href');
-    $('.block-container').addClass('active');
-    $('.burger-container').removeClass('active');
-    $('html, body').animate({
-        scrollTop: $(" .block.block-4").offset().top - 40
-
-    }, 500);
-
-});
-
-$("#about").click(function () {
-    // var id =  $(this).attr('href');
-    $('.block-container').addClass('active');
-    $('.burger-container').removeClass('active');
-    $('html, body').animate({
-        scrollTop: $(" .block.block-1").offset().top - 40
-
-    }, 500);
-
 });
 
 $("#skills").click(function () {
     // var id =  $(this).attr('href');
-    $('.block-container').addClass('active');
+    $('#block-3').parent().addClass('active');
     $('.burger-container').removeClass('active');
     $('html, body').animate({
         scrollTop: $(" .block.block-3").offset().top - 40
-
     }, 500);
-
 });
+
+$("#contact").click(function () {
+    // var id =  $(this).attr('href');
+    $('#block-4').parent().addClass('active');
+    $('.burger-container').removeClass('active');
+    $('html, body').animate({
+        scrollTop: $(" .block.block-4").offset().top - 40
+    }, 500);
+});
+
+
+
+
 
 
 // $(".burgeritem").click(function () {
