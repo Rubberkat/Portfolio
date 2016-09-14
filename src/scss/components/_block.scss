@@ -108,6 +108,7 @@
   height: 100vh;
   left: 0;
   z-index: 50;
+  cursor: default;
   @include transition(all 0.3s ease-in);
 
   p, h1, .bottom-text {
