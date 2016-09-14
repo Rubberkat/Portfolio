@@ -24,7 +24,6 @@
   opacity: 1;
   display: inline-block;
   z-index: 1000;
-  position: relative;
   @include transition(all 0.3s ease-in);
 }
 
