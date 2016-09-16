@@ -40,8 +40,8 @@
   fill: #D9D9D9;
   float: right;
   position: relative;
-  margin-top: 0px;
-  margin-right: 30px;
+  margin-top: -30px;
+  margin-right: 20px;
   width: 60px;
   height: 60px;
   visibility: hidden;
@@ -56,8 +56,8 @@
 
 .block-container.active .close-button svg {
   opacity: 1;
-  margin-top: 30px;
-  margin-right: 30px;
+  margin-top: 20px;
+  margin-right: 20px;
   visibility: visible;
   @include transition(all 0.2s ease-in);
   @media #{$small-only} {
