@@ -2,12 +2,14 @@ $default-font: 'HelveticaNeue-Light', 'Helvetica', 'Arial';
 
 html {
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   font-family: $default-font;
   color: $color-font;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
