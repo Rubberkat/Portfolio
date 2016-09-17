@@ -1,8 +1,13 @@
 $default-font: 'HelveticaNeue-Light', 'Helvetica', 'Arial';
 
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
 body {
   font-family: $default-font;
   color: $color-font;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,
