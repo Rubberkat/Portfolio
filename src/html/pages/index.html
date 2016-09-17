@@ -6,9 +6,8 @@
 {#Add the content of the page in the block content#}
 {% block content %}
     <div class="row">
-
         <div class="block-container">
-            <div class="block block-1" id="block-1">
+            <div class="block">
                 <h1>About</h1>
                 <p>
                     Hey there! My name is Roy de Jager. If you want I can tell more about me? Click on me to
@@ -18,29 +17,42 @@
                 <div class="bottom-text">
                     CLICK TO EXPAND
                 </div>
-                {% include "partials/page.html" %}
-            </div>
-        </div>
+                <div class="page-container">
+                    <div class="white-page">
+                        <div class="page-content">
 
-        <div class="block-container">
-            <div class="block block-2" id="block-2">
-                <h1>Works </h1>
-                <p>
-
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet,
-                    consectetur
-                    adipisicing elit. Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit.
-                </p>
-                <div class="bottom-text">
-                    CLICK TO EXPAND
+                            {% include 'partials/close-button.html' %}
+                        </div>
+                    </div>
                 </div>
-                {% include "partials/page.html" %}
             </div>
-        </div>
 
-        <div class="block-container">
-            <div class="block block-3" id="block-3">
+
+            <div class="block">
+                <div class="content">
+                    <h1>Works </h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet,
+                        consectetur
+                        adipisicing elit. Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit.
+                    </p>
+                    <div class="bottom-text">
+                        CLICK TO EXPAND
+                    </div>
+                    <div class="page-container">
+                        <div class="white-page">
+                            <div class="page-content">
+
+
+                                {% include 'partials/close-button.html' %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block">
                 <h1>
                     Skills
                 </h1>
@@ -54,12 +66,18 @@
                 <div class="bottom-text">
                     CLICK TO EXPAND
                 </div>
-                {% include "partials/page.html" %}
-            </div>
-        </div>
+                <div class="page-container">
+                    <div class="white-page">
+                        <div class="page-content">
 
-        <div class="block-container">
-            <div class="block block-4" id="block-4">
+
+                            {% include 'partials/close-button.html' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block">
                 <h1>
                     Contact
                 </h1>
@@ -71,7 +89,14 @@
                 <div class="bottom-text">
                     CLICK TO EXPAND
                 </div>
-                {% include "partials/page.html" %}
+                <div class="page-container">
+                    <div class="white-page">
+                        <div class="page-content">
+
+                            {% include 'partials/close-button.html' %}
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

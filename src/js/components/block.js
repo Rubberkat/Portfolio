@@ -1,7 +1,7 @@
 var $ = require('jquery');
 
 
-$(".block-container").hover(function () {
+$(".block").hover(function () {
     $(this).toggleClass("block-hover");
-    $(".block-container").not(this).toggleClass("no-hover");
+    $(".block").not(this).toggleClass("no-hover");
 });
