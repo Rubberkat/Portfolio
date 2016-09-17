@@ -17,14 +17,19 @@ $color-list: ($color-block-1, $color-block-2, $color-block-3, $color-block-4);
   .block {
     overflow: hidden;
     @media #{$small-only} {
+      position: relative;
       padding: 20px 30px 50px 30px;
       height: 50vh;
+      left:0;
       @include transition(all 0.2s ease-in);
+      h1 {
+        margin-top:15px;
+      }
     }
     @media #{$medium-up} {
       @include column(3);
       height: 100vh;
-      padding: 30px 30px 100px 30px;
+      padding: 45px 30px 100px 30px;
       position: absolute;
       z-index: -1;
       @include transition(all 0.3s ease-in);
@@ -33,7 +38,6 @@ $color-list: ($color-block-1, $color-block-2, $color-block-3, $color-block-4);
         opacity: 0.4;
       }
       h1 {
-
         opacity: 1;
       }
     }
@@ -47,8 +51,10 @@ $color-list: ($color-block-1, $color-block-2, $color-block-3, $color-block-4);
       visibility: visible;
       @include transition(all 0.3s ease-in);
       @media #{$small-only} {
-        position: relative;
+        position: absolute;
         opacity: 1;
+        bottom:0;
+
       }
       @media #{$medium-up} {
         opacity: 0.4;
@@ -108,18 +114,6 @@ $color-list: ($color-block-1, $color-block-2, $color-block-3, $color-block-4);
 
   p, .bottom-text {
     display: none;
-  }
-
-  h1 {
-
-    padding-left:30px;
-    position: absolute;
-    z-index: 100000;
-    color:black;
-    @include transition(all 0.3s ease-in);
-    @media #{$small-only} {
-      padding:0;
-    }
   }
 }
 

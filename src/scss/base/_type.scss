@@ -1,4 +1,4 @@
-$default-font: "Helvetica";
+$default-font: 'HelveticaNeue-Light', 'Helvetica', 'Arial';
 
 body {
   font-family: $default-font;
@@ -20,15 +20,15 @@ em {
 }
 
 p {
-  font-size: 14px;
-
+  font-size: 15px;
   @media #{$medium-up} {
-    font-size: 14px;
+    font-size: 15px;
 
   }
 }
 
 h1 {
+  line-height: 45px;
   font-size: 45px;
   color:white;
 
