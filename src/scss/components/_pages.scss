@@ -59,7 +59,7 @@
   margin-top: 20px;
   margin-right: 20px;
   visibility: visible;
-  @include transition(all 0.2s ease-in);
+  @include transition(all 0.2s ease-out);
   @media #{$small-only} {
     fill: #707070;
     stroke: #707070;
