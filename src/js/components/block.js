@@ -1,7 +1,10 @@
 var $ = require('jquery');
 
 
+
 $(".block").hover(function () {
-    $(this).toggleClass("block-hover");
-    $(".block").not(this).toggleClass("no-hover");
+    var $this = $(this);
+
+    $this.toggleClass("block-hover");
+    $(".block").not($this).toggleClass("no-hover");
 });

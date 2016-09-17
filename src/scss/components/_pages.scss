@@ -24,7 +24,13 @@
     height: 100vh;
   }
   @media #{$medium-up} {
-    padding-top: 30px;
+    padding-top: 20px;
+  }
+}
+
+.white-page {
+  @media#{$small-only} {
+    margin-top: 10px;
   }
 }
 
@@ -33,36 +39,51 @@
   height: 100%;
   background-color: #F2F2F2;
   @include transition(all 0.3s ease-in);
+  @media#{$small-only} {
+    margin-top: 10px;
+  }
 }
 
 .close-button svg {
   cursor: pointer;
   fill: #D9D9D9;
   float: right;
-  position: relative;
-  margin-top: -30px;
   margin-right: 20px;
   width: 60px;
   height: 60px;
   visibility: hidden;
   opacity: 0;
-  &:hover {
-    @include transform(rotate(180deg));
-    fill: #707070;
-    stroke: #707070;
-    stroke-width: 10;
+
+  @media #{$small-only} {
+    position: absolute;
+    right: 0;
+    margin-top: 20px;
+
+  }
+  @media #{$medium-up} {
+    position: absolute;
+    margin-top: 20px;
+    margin-right:60px;
+    right:0;
+    z-index: 1000;
+    &:hover {
+      @include transform(rotate(180deg));
+      fill: #707070;
+      stroke: #707070;
+      stroke-width: 10;
+    }
   }
 }
 
 .block.active .close-button svg {
   opacity: 1;
-  margin-top: 20px;
-  margin-right: 20px;
   visibility: visible;
   @include transition(all 0.2s ease-out);
   @media #{$small-only} {
     fill: #707070;
     stroke: #707070;
+    margin-top: 20px;
+    margin-right: 20px;
   }
 
 }

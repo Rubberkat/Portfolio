@@ -17,7 +17,7 @@ $color-list: ($color-block-1, $color-block-2, $color-block-3, $color-block-4);
   .block {
     overflow: hidden;
     @media #{$small-only} {
-      padding: 30px 30px 50px 30px;
+      padding: 20px 30px 50px 30px;
       height: 50vh;
       @include transition(all 0.2s ease-in);
     }
@@ -29,9 +29,11 @@ $color-list: ($color-block-1, $color-block-2, $color-block-3, $color-block-4);
       z-index: -1;
       @include transition(all 0.3s ease-in);
       p {
+
         opacity: 0.4;
       }
       h1 {
+
         opacity: 1;
       }
     }
@@ -104,8 +106,20 @@ $color-list: ($color-block-1, $color-block-2, $color-block-3, $color-block-4);
   cursor: default;
   @include transition(all 0.3s ease-in);
 
-  p, h1, .bottom-text {
+  p, .bottom-text {
     display: none;
+  }
+
+  h1 {
+
+    padding-left:30px;
+    position: absolute;
+    z-index: 100000;
+    color:black;
+    @include transition(all 0.3s ease-in);
+    @media #{$small-only} {
+      padding:0;
+    }
   }
 }
 
