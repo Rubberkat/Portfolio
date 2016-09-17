@@ -1,17 +1,17 @@
 var $ = require('jquery');
 
 $('.block').click(function () {
-    var $parent = $(this).parent();
+    // var $parent = $(this).parent();
 
-    if ($parent.hasClass('active')) {
-        $parent.addClass('active');
+    if ($(this).hasClass('active')) {
+        $(this).addClass('active');
 
 
         return false;
     }
 
-    $('.block-container').removeClass('active').addClass('hidden');
-    $parent.addClass('active');
-    $parent.removeClass('hidden');
+    $('.block').removeClass('active').addClass('hidden');
+    $(this).addClass('active');
+    $(this).removeClass('hidden');
 });
 

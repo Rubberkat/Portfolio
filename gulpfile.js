@@ -1,12 +1,10 @@
 var
     gulp = require('gulp'),
-
     nunjucksRender = require('gulp-nunjucks-render'),
-
     sass = require('gulp-sass'),
-
     browserify = require('browserify'),
-    source = require('vinyl-source-stream')
+    source = require('vinyl-source-stream'),
+    image = require('gulp-image')
     ;
 
 
@@ -37,11 +35,27 @@ gulp.task('browserify', function () {
         .pipe(gulp.dest('dist'));
 });
 
+gulp.task('image', function () {
+    gulp.src('./src/images/**/*.+(jpg|png)')
+        .pipe(image({
+            pngquant: false,
+            optipng: false,
+            zopflipng: true,
+            jpegRecompress: false,
+            jpegoptim: true,
+            mozjpeg: true,
+            gifsicle: true,
+            svgo: false,
+            concurrent: 10
+        }))
+        .pipe(gulp.dest('./dist'));
+});
 
 gulp.task('watch', function () {
     gulp.watch('src/**/*.+(html|nunjucks)', ['nunjucks']);
     gulp.watch('src/scss/**/*.scss', ['sass']);
     gulp.watch('src/js/**/*.js', ['browserify']);
+    gulp.watch('src/images/**/*.+(jpg|png)', ['image']);
 });
 
 
