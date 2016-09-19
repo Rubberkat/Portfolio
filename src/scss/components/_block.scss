@@ -1,7 +1,6 @@
 $list: 1;
 $color-list: ($color-block-1, $color-block-2, $color-block-3, $color-block-4);
 
-
 @for $i from 1 through length($color-list) {
   $percentage: percentage($list * $i / 4);
   $left: $percentage - 25;
@@ -11,19 +10,18 @@ $color-list: ($color-block-1, $color-block-2, $color-block-3, $color-block-4);
   }
 }
 
-
 .row {
   @include row();
   .block {
     overflow: hidden;
     @media #{$small-only} {
       position: relative;
-      padding: 20px 30px 50px 30px;
-      min-height:300px;
-      left:0;
-      @include transition(all 0.2s ease-in);
+      padding: 20px 0px 0px 20px;
+      height: 50vh;
+      left: 0;
+      @include transition(all 0.3s ease-in);
       h1 {
-        margin-top:15px;
+        margin-top: 15px;
       }
     }
     @media #{$medium-up} {
@@ -52,7 +50,7 @@ $color-list: ($color-block-1, $color-block-2, $color-block-3, $color-block-4);
       @media #{$small-only} {
         position: absolute;
         opacity: 1;
-        bottom:0;
+        bottom: 0;
       }
       @media #{$medium-up} {
         opacity: 0.4;
@@ -61,19 +59,24 @@ $color-list: ($color-block-1, $color-block-2, $color-block-3, $color-block-4);
   }
 }
 
-
-.block.block-hover {
-  cursor: pointer;
+.block.active {
+  left: 0;
+  z-index: 5000;
+  width: 100%;
+  cursor: default;
+  @include transition(all 0.3s ease-out);
+  @media #{$small-only} {
+    clear: both;
+    height: 100%;
+  }
   @media #{$medium-up} {
-    @include transition(all 0.2s ease-in);
-    p, .bottom-text {
-      opacity: 1;
-      @include transition(all 0.2s ease-in);
-    }
-
+    //overflow-x: hidden;
+    //overflow-y: visible;
+  }
+  p, .bottom-text {
+    display: none;
   }
 }
-
 
 .block::before {
   @media #{$medium-up} {
@@ -89,12 +92,23 @@ $color-list: ($color-block-1, $color-block-2, $color-block-3, $color-block-4);
   }
 }
 
+.block.block-hover {
+  cursor: pointer;
+  @media #{$medium-up} {
+    @include transition(all 0.2s ease-in);
+    p, .bottom-text {
+      opacity: 1;
+      @include transition(all 0.2s ease-in);
+    }
+
+  }
+}
 
 .block.no-hover::before {
   @media #{$medium-up} {
     background: rgba(0, 0, 0, 0.6);
     @include transition(all 0.2s ease-in);
-    z-index:10000;
+    z-index: 10000;
     p, .bottom-text {
       opacity: 0.07;
       @include transition(all 0.2s ease-in);
@@ -102,20 +116,7 @@ $color-list: ($color-block-1, $color-block-2, $color-block-3, $color-block-4);
   }
 }
 
-.block.active {
-  width: 100%;
 
-  left: 0;
-  z-index: 50;
-  cursor: default;
-  @include transition(all 0.3s ease-out);
-  @media #{$small-only} {
-    min-height: 100%;
-  }
-  p, .bottom-text {
-    display: none;
-  }
-}
 
 
 
