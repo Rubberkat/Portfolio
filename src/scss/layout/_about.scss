@@ -8,11 +8,12 @@
 //}
 //
 
-.profile {
-  @media #{$small-only} {
-    //padding-bottom: 16px;
-  }
-}
+//.profile {
+//  @media #{$small-only} {
+//    //padding-bottom: 16px;
+//  }
+//}
+
 
 .title {
   font-size: 16px;
@@ -41,22 +42,19 @@
 }
 //
 .image-container {
-  height: 100vh;
-  width:100vw;
-  padding-top:60px;
-  padding-right: 110px;
-  padding-bottom:320px;
-  margin-bottom:-300px;
+  height: 675px;
+  width:100%;
+  padding-bottom:380px;
+  margin-bottom:-360px;
   z-index:1;
   position: relative;
   @media #{$small-only} {
     position: relative;
-    padding-right: 40px;
-    padding-top:80px;
     z-index:1;
   }
 }
 .image {
+
   background-size: cover;
   background-position: center;
   height:100%;
@@ -82,9 +80,10 @@
     }
 
   }
+
   .interests {
     @media #{$small-only} {
-      //@include  column(6)
+      //@include  column(6);
       padding-top:15px;
     }
     @media #{$medium-up} {

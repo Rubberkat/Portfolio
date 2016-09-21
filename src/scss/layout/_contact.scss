@@ -1,0 +1,50 @@
+.button-container {
+  width: 100%;
+  height:200px;
+  top:35%;
+  padding-left:30%;
+  position: absolute;
+}
+
+
+.github svg {
+  zoom: 10%;
+  fill: black;
+  //cursor: pointer;
+  position: absolute;
+  margin-top: 130px;
+  &:hover {
+    fill: #00918E;
+  }
+
+}
+
+.linkedin svg {
+  fill: black;
+  cursor: pointer;
+  position: absolute;
+  zoom: 25%;
+  margin-left: 600px;
+
+  &:hover {
+    fill: #00918E;
+
+  }
+
+}
+
+.email svg {
+  fill: black;
+  cursor: pointer;
+  position: absolute;
+  zoom: 25%;
+  margin-left: 1200px;
+
+  &:hover {
+    fill: #00918E;
+  }
+
+}
+
+
+//

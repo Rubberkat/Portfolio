@@ -9,13 +9,12 @@
 
 @import "pages/pages";
 
-@import "layout/_page-about";
+
 @import "layout/_page-works";
 @import "layout/_page-skills";
-@import "layout/_page-contact";
+@import "layout/contact";
 
-@import "components/burger";
 @import "components/block";
 
-
+@import "layout/about";
 
