@@ -1,9 +1,7 @@
 .button-container {
-  width: 100%;
-  height:200px;
-  top:35%;
-  padding-left:30%;
-  position: absolute;
+  width:100%;
+  //position: relative;
+  display: block;
 }
 
 
@@ -11,10 +9,9 @@
   zoom: 10%;
   fill: black;
   //cursor: pointer;
-  position: absolute;
   margin-top: 130px;
   &:hover {
-    fill: #00918E;
+    //fill: $color-block-1;
   }
 
 }
@@ -22,12 +19,12 @@
 .linkedin svg {
   fill: black;
   cursor: pointer;
-  position: absolute;
+
   zoom: 25%;
-  margin-left: 600px;
+  //margin-left: 600px;
 
   &:hover {
-    fill: #00918E;
+    //fill: $color-block-2;
 
   }
 
@@ -36,15 +33,36 @@
 .email svg {
   fill: black;
   cursor: pointer;
-  position: absolute;
+
   zoom: 25%;
-  margin-left: 1200px;
+  //margin-left: 1200px;
 
   &:hover {
-    fill: #00918E;
+    //fill: $color-block-3;
   }
 
 }
 
+.facebook svg {
+  fill:black;
+  margin-top: 20px;
+  //margin-left: 460px;
 
+  &:hover {
+    //fill: $color-block-4;
+  }
+}
+
+//.row {
+//  @include row();
 //
+//  .button a {
+//    @media #{$small-only} {
+//      @include column(12);
+//    }
+//    @media #{$medium-up} {
+//      @include column(3);
+//
+//    }
+//  }
+//}

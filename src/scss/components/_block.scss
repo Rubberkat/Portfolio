@@ -1,11 +1,9 @@
 $list: 0;
-$color-list: ($color-block-1, $color-block-2, $color-block-3, $color-block-4);
 
-@for $i from 1 through length($color-list) {
+@for $i from 1 through 4 {
   $percentage: percentage($i/4);
   $left: $percentage - 25;
   .block:nth-child(#{$i}) {
-    background-color: nth($color-list, $i);
     left: $left;
   }
 }
@@ -17,11 +15,18 @@ $color-list: ($color-block-1, $color-block-2, $color-block-3, $color-block-4);
     overflow: hidden;
     @media #{$small-only} {
       position: relative;
-      padding: 20px 0px 0px 20px;
-      height: 50vh;
+      padding: 20px 20px 0px 20px;
+      height: 300px;
       left: 0;
       h1 {
         margin-top: 15px;
+      }
+      .bottom-text {
+        position: absolute;
+        bottom: 0;
+        padding-bottom: 50px;
+        visibility: visible;
+
       }
     }
     @media #{$medium-up} {
@@ -33,26 +38,20 @@ $color-list: ($color-block-1, $color-block-2, $color-block-3, $color-block-4);
       z-index: -1;
       @include transition(all 0.3s ease-in);
       p {
-        opacity: 0.4;
+        color: rgba(255, 255, 255, 0.4);
         @include transition(all 0.2s ease-out);
       }
       h1 {
-        opacity: 1;
+        @include transition(all 0.2s ease-out);
       }
-    }
-    .bottom-text {
-      bottom: 0;
-      padding-bottom: 50px;
-      position: absolute;
-      visibility: visible;
-      @include transition(all 0.3s ease-in);
-      @media #{$small-only} {
-        position: absolute;
-        opacity: 1;
+      .bottom-text {
+        color: rgba(255, 255, 255, 0.4);
         bottom: 0;
-      }
-      @media #{$medium-up} {
-        opacity: 0.4;
+        position: absolute;
+        padding-bottom: 50px;
+        visibility: visible;
+        @include transition(all 0.2s ease-in);
+
       }
     }
   }
@@ -62,9 +61,8 @@ $color-list: ($color-block-1, $color-block-2, $color-block-3, $color-block-4);
   left: 0;
   z-index: 5000;
   width: 100%;
-  cursor: default;
+  cursor: auto;
   @media #{$small-only} {
-    clear: both;
     height: 100%;
   }
   @media #{$medium-up} {
@@ -93,7 +91,7 @@ $color-list: ($color-block-1, $color-block-2, $color-block-3, $color-block-4);
   cursor: pointer;
   @media #{$medium-up} {
     p, .bottom-text {
-      opacity: 1;
+      color: rgba(255, 255, 255, 1);
       @include transition(all 0.2s ease-in);
     }
 
@@ -105,8 +103,9 @@ $color-list: ($color-block-1, $color-block-2, $color-block-3, $color-block-4);
     background: rgba(0, 0, 0, 0.5);
     @include transition(all 0.2s ease-in);
     z-index: 10000;
-    }
   }
+}
+
 
 
 

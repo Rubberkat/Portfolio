@@ -1,93 +1,91 @@
 {% extends "layout.html" %}
 
 {# add the title of the page between the block title#}
-{% block title %} Home {% endblock %}
+{% block title %} Roy de Jager {% endblock %}
 
 {#Add the content of the page in the block content#}
 {% block content %}
-<div class="row">
-    <div class="block-container">
+    <div class="row">
+        <div class="block-container">
 
-        <div class="block">
-            <h1>About</h1>
-            <p>
-                Hey there! My name is Roy de Jager. If you want I can tell more about me? Click on me to
-                hear
-                more.
-            </p>
-            <div class="bottom-text">
-                CLICK TO EXPAND
-            </div>
+            <div class="block">
+                <h1>About</h1>
+                <p>
+                    Hey there! My name is Roy de Jager. If you want I can tell more about me? Click here to hear more
+                    about
+                    me!
+                </p>
+                <div class="bottom-text">
+                    CLICK TO EXPAND
+                </div>
 
-            <div class="page-container">
-                <div class="white-page">
-                    {% include 'content/about.html' %}
+                <div class="page-container">
+                    <div class="white-page">
+                        {% include 'content/about.html' %}
+                    </div>
                 </div>
             </div>
-        </div>
 
 
-        <div class="block">
-            <div class="content">
-                <h1>Works</h1>
+            <div class="block">
+                <div class="content">
+                    <h1>Works</h1>
+                    <p>
+                        This will show you all the works I have created so far. This website is also one of my
+                        creations, so feel free to look around! You can also check out my github for the code of some of
+                        my projects.
+
+                    </p>
+                    <div class="bottom-text">
+                        CLICK TO EXPAND
+                    </div>
+                    <div class="page-container">
+                        <div class="white-page">
+                            {% include 'content/works.html' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="block">
+                <h1>
+                    Skills
+                </h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet,
-                    consectetur
-                    adipisicing elit. Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit.
+                    Want to see what I can do besides drinking coffee? This will show you all the skills I posses to
+                    make awesome websites. Click on me to see!
                 </p>
                 <div class="bottom-text">
                     CLICK TO EXPAND
                 </div>
                 <div class="page-container">
                     <div class="white-page">
-                        {% include 'content/works.html' %}
+                        {% include 'content/skills.html' %}
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="block">
+                <h1>
+                    Contact
+                </h1>
+                <p>
+                    Did you like what you saw? If you want I can show you how to contact me. Just click and
+                    you'll see
+                    how. Looking forward to hear from you!
+                </p>
+                <div class="bottom-text">
+                    CLICK TO EXPAND
+                </div>
+                <div class="page-container">
+                    <div class="white-page">
+                        {% include 'content/contact.html' %}
                     </div>
                 </div>
             </div>
         </div>
-
-
-        <div class="block">
-            <h1>
-                Skills
-            </h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet,
-                consectetur
-                adipisicing elit.Lorem ipsum dolor sit amet, consectetur
-                adipisicing elit.
-            </p>
-            <div class="bottom-text">
-                CLICK TO EXPAND
-            </div>
-            <div class="page-container">
-                <div class="white-page">
-                    {% include 'content/skills.html' %}
-                </div>
-            </div>
-        </div>
-
-
-        <div class="block">
-            <h1>
-                Contact
-            </h1>
-            <p>
-                Did you like what you see? If you want I can show you how to contact me. Just click and
-                you'll see
-                how.
-            </p>
-            <div class="bottom-text">
-                CLICK TO EXPAND
-            </div>
-            <div class="page-container">
-                <div class="white-page">
-                    {% include 'content/contact.html' %}
-                </div>
-            </div>
-        </div>
     </div>
-</div>
 
-    {% endblock %}
+{% endblock %}
