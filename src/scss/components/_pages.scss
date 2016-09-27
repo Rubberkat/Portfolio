@@ -8,7 +8,6 @@
   pointer-events: none;
   z-index: 1000;
   position: absolute;
-
   @include transition(all 0.2s ease-in);
 }
 
