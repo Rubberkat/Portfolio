@@ -61,7 +61,7 @@ $list: 0;
         position: absolute;
         visibility: visible;
         //@include transition(padding-top 0.2s ease-in, color 0.2s ease-out);
-        @include transition(background-color 0.2s ease-out, $opacity-transition);
+        @include transition(padding 0.2s ease-in, background-color 0.2s ease-out, $opacity-transition);
 
       }
     }
