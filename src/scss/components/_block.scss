@@ -1,4 +1,4 @@
-$opacity-transition: opacity 0.2s ease-in 0.4s;
+$opacity-transition: opacity 0.2s ease-in 0.5s;
 $list: 0;
 
 @for $i from 1 through 4 {
@@ -40,7 +40,7 @@ $list: 0;
       position: absolute;
       min-height: 500px;
       z-index: -1;
-      @include transition(left 0.2s ease-in 0.2s, width 0.2s ease-in 0.2s, z-index 0.2s ease-in 0.2s);
+      @include transition(left 0.2s ease-in 0.3s, width 0.2s ease-in 0.3s, z-index 0.2s ease-in 0.3s);
       p {
         opacity: 1;
         color: rgba(255, 255, 255, 0.2);

@@ -26,7 +26,7 @@
 .block.active .page-container {
   visibility: visible;
   display: inline-block;
-  @include transition(all 0.6s ease-in);
+  @include transition(all 0.5s ease-in);
   @media #{$small-only} {
     height: 100%;
 
