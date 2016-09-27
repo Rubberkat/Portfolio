@@ -4,12 +4,3 @@ $color-secondary: black;
 $color-font: #333;
 
 
-//$colors: #FF534E, #C4A684, #A0B07D, #499989, #01A2A6, #703030, #35203B, #72616e, #e8846b, #16528e, #e54b4b, #a2c5bf, #167c80;
-//$repeat: 4; // How often you want the pattern to repeat.
-//// Warning: a higher number outputs more CSS
-//
-//@for $i from 1 through 4 {
-//  .block:nth-child(#{length($colors)}n+#{$i}) {
-//    background: nth($colors, random(length($colors)));
-//  }
-

@@ -1,8 +1,6 @@
 .page-container {
   left: 0;
   width: 100vw;
-  visibility: hidden;
-  display: none;
   cursor: auto;
 
   @media #{$small-only} {
@@ -10,48 +8,57 @@
     margin-left: -10px;
     padding: 10px 20px 10px 0px;
     height: 0;
+    visibility: hidden;
+    display: none;
   }
   @media #{$medium-up} {
-    top: 0;
+    top: 300vh;
     min-height: 600px;
     height: 100vh;
     padding: 20px 20px 20px 20px;
     position: absolute;
-    width: 100%;
+
+    width: 100vw;
+    @include transition(all 0.3s ease-in);
   }
 }
 
 .block.active .page-container {
-
   visibility: visible;
   display: inline-block;
-  @include transition(all 0.3s ease-out);
+  @include transition(all 0.6s ease-in);
   @media #{$small-only} {
     height: 100%;
+
   }
   @media #{$medium-up} {
+    top:0;
     padding-top: 20px;
     width: 100vw;
+
   }
 }
 
 .white-page {
+  background-color: #F2F2F2;
   @media#{$small-only} {
     padding: 90px 10px 20px 10px;
     margin-top: 10px;
     height: 100%;
+    width: 100%;
   }
   @media #{$medium-up} {
     padding: 90px 30px 30px 30px;
     height: 100%;
-
+    width: 100%;
+    visibility: visible;
+    margin-right:100px;
   }
 }
 
 .block.active .white-page {
-  width: 100%;
   background-color: #F2F2F2;
-  @include transition(all 0.3s ease-in);
+  //@include transition(all 0.6s ease-in);
   @media#{$small-only} {
     margin-top: 10px;
   }
@@ -101,24 +108,25 @@
   @include transition(all 0.2s ease-out);
   @media #{$small-only} {
     fill: #707070;
+    stroke-width:0;
     stroke: #707070;
-
+    //position: fixed;
     margin-right: 20px;
   }
 
 }
 
-.block.active h1 {
-  position: absolute;
-  z-index: 100000;
-  color: black;
-  cursor: auto;
-  @media #{$small-only} {
-    padding-left: 0px;
-  }
-  @media #{$medium-up} {
-
-    padding-left: 20px;
-    @include transition(all 0.2s ease);
-  }
-}
+//.block.active h1 {
+//  //position: absolute;
+//  z-index: 100000;
+//  color: black;
+//  cursor: auto;
+//  @media #{$small-only} {
+//    padding-left: 0px;
+//  }
+//  @media #{$medium-up} {
+//
+//    padding-left: 20px;
+//    @include transition(all 0.2s ease);
+//  }
+//}

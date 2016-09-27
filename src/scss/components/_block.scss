@@ -1,3 +1,4 @@
+$opacity-transition: opacity 0.2s ease-in 0.4s;
 $list: 0;
 
 @for $i from 1 through 4 {
@@ -11,7 +12,7 @@ $list: 0;
 .row {
   @include row();
   .block {
-
+    background-color: #bfbfbf;
     overflow: hidden;
     @media #{$small-only} {
       position: relative;
@@ -28,6 +29,9 @@ $list: 0;
         visibility: visible;
 
       }
+      .expand svg {
+        fill: rgba(255, 255, 255, 1);
+      }
     }
     @media #{$medium-up} {
       @include column(3);
@@ -36,24 +40,48 @@ $list: 0;
       position: absolute;
       min-height: 500px;
       z-index: -1;
-      @include transition(all 0.3s ease-in);
+      @include transition(left 0.2s ease-in 0.2s, width 0.2s ease-in 0.2s, z-index 0.2s ease-in 0.2s);
       p {
-        color: rgba(255, 255, 255, 0.4);
-        @include transition(all 0.2s ease-out);
+        opacity: 1;
+        color: rgba(255, 255, 255, 0.2);
+        @include transition(color 0.2s ease-in, $opacity-transition);
       }
       h1 {
-        @include transition(all 0.2s ease-out);
+        color: rgba(255, 255, 255, 1);
+        opacity: 1;
+        //@include transition(opacity 0.3s ease-in 0.6s);
       }
       .bottom-text {
+        padding: 0 0 30px 30px;
+        width: 100%;
+        left: 0;
+        opacity: 1;
         color: rgba(255, 255, 255, 0.4);
         bottom: 0;
         position: absolute;
-        padding-bottom: 50px;
         visibility: visible;
-        @include transition(all 0.2s ease-in);
+        //@include transition(padding-top 0.2s ease-in, color 0.2s ease-out);
+        @include transition(background-color 0.2s ease-out, $opacity-transition);
 
       }
     }
+  }
+}
+
+//.bottom-text {
+//  padding-bottom: 30px;
+//  padding-top: 30px;
+//  padding-left: 30px;
+//  width: 100%;
+//  left: 0;
+//  background-color: rgba(0, 0, 0, 0.2);
+//  @include transition(padding-top 0.2s ease-out);
+//}
+//
+ h1, .expand svg {
+  @media #{$medium-up} {
+    opacity: 1;
+    @include transition($opacity-transition);
   }
 }
 
@@ -62,15 +90,21 @@ $list: 0;
   z-index: 5000;
   width: 100%;
   cursor: auto;
+  overflow: hidden;
+  //@include transition(z-index 0.4s ease-in);
+  @include transition(left 0.2s ease-in, width 0.2s ease-in, z-index 0.1s ease-in );
   @media #{$small-only} {
     height: 100%;
   }
   @media #{$medium-up} {
-    @include transition(all 0.3s ease-in);
+    //position: absolute;
+    .bottom-text, p, h1, .expand svg {
+      opacity: 0;
+      //display: none;
+      @include transition(opacity 0s ease-in);
+    }
   }
-  p, .bottom-text {
-    display: none;
-  }
+
 }
 
 .block::before {
@@ -83,30 +117,54 @@ $list: 0;
     height: 100%;
     position: absolute;
     background: rgba(0, 0, 0, 0.0);
-    @include transition(all 0.2s ease-in);
+    @include transition(background 0.2s ease-in);
   }
+}
+
+.block.block-hover.active, .block.active.block-hover {
+  p, .bottom-text {
+    opacity: 0;
+    @include transition(opacity 0s ease-in);
+  }
+
 }
 
 .block.block-hover {
   cursor: pointer;
   @media #{$medium-up} {
-    p, .bottom-text {
+    p, .bottom-text, .expand svg {
       color: rgba(255, 255, 255, 1);
-      @include transition(all 0.2s ease-in);
+      fill: rgba(255, 255, 255, 1);
+
+      @include transition(color 0.2s, fill 0.2s ease-out, $opacity-transition);
+    }
+    .bottom-text {
+      padding: 30px 0 30px 30px;
+      width: 100%;
+      left: 0;
+      opacity: 1;
+      background-color: rgba(0, 0, 0, 0.2);
+      @include transition(padding 0.2s ease-out, $opacity-transition);
     }
 
   }
 }
 
+
 .block.no-hover::before {
   @media #{$medium-up} {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
     @include transition(all 0.2s ease-in);
     z-index: 10000;
   }
 }
 
-
+.expand svg {
+  @include transition(all 0.2s ease-out);
+  fill: rgba(255, 255, 255, 0.4);
+  bottom: 0;
+  @include transform(rotate(270deg))
+}
 
 
 
