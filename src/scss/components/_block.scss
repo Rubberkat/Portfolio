@@ -1,4 +1,4 @@
-$opacity-transition: opacity 0.2s ease-in 0.5s;
+$opacity-transition: opacity 0.2s ease-in 0.6s;
 $list: 0;
 
 @for $i from 1 through 4 {
@@ -8,6 +8,7 @@ $list: 0;
     left: $left;
   }
 }
+
 
 .row {
   @include row();
@@ -38,6 +39,7 @@ $list: 0;
       height: 100vh;
       padding: 45px 30px 100px 30px;
       position: absolute;
+      display: inline-block;
       min-height: 500px;
       z-index: -1;
       @include transition(left 0.2s ease-in 0.3s, width 0.2s ease-in 0.3s, z-index 0.2s ease-in 0.3s);
@@ -49,7 +51,6 @@ $list: 0;
       h1 {
         color: rgba(255, 255, 255, 1);
         opacity: 1;
-        //@include transition(opacity 0.3s ease-in 0.6s);
       }
       .bottom-text {
         padding: 0 0 30px 30px;
@@ -60,24 +61,14 @@ $list: 0;
         bottom: 0;
         position: absolute;
         visibility: visible;
-        //@include transition(padding-top 0.2s ease-in, color 0.2s ease-out);
-        @include transition(padding 0.2s ease-in, background-color 0.2s ease-out, $opacity-transition);
+
+        @include transition(color 0.2s ease-in, padding 0.2s ease-in, background-color 0.2s ease-out, $opacity-transition);
 
       }
     }
   }
 }
 
-//.bottom-text {
-//  padding-bottom: 30px;
-//  padding-top: 30px;
-//  padding-left: 30px;
-//  width: 100%;
-//  left: 0;
-//  background-color: rgba(0, 0, 0, 0.2);
-//  @include transition(padding-top 0.2s ease-out);
-//}
-//
  h1, .expand svg {
   @media #{$medium-up} {
     opacity: 1;
@@ -91,16 +82,17 @@ $list: 0;
   width: 100%;
   cursor: auto;
   overflow: hidden;
-  //@include transition(z-index 0.4s ease-in);
-  @include transition(left 0.2s ease-in, width 0.2s ease-in, z-index 0.1s ease-in );
+
+  @include transition(left 0.2s ease-in, width 0.2s ease-in, z-index 0.1s ease-in);
   @media #{$small-only} {
     height: 100%;
+    h1, p {
+      display: none;
+    }
   }
   @media #{$medium-up} {
-    //position: absolute;
     .bottom-text, p, h1, .expand svg {
       opacity: 0;
-      //display: none;
       @include transition(opacity 0s ease-in);
     }
   }
@@ -121,7 +113,7 @@ $list: 0;
   }
 }
 
-.block.block-hover.active, .block.active.block-hover {
+.block.hover.active, .block.active.hover {
   p, .bottom-text {
     opacity: 0;
     @include transition(opacity 0s ease-in);
@@ -129,14 +121,14 @@ $list: 0;
 
 }
 
-.block.block-hover {
+.block.hover {
   cursor: pointer;
   @media #{$medium-up} {
-    p, .bottom-text, .expand svg {
+    p, .expand svg {
       color: rgba(255, 255, 255, 1);
       fill: rgba(255, 255, 255, 1);
 
-      @include transition(color 0.2s, fill 0.2s ease-out, $opacity-transition);
+      @include transition(color 0.2s ease-in, fill 0.2s ease-out, $opacity-transition);
     }
     .bottom-text {
       padding: 30px 0 30px 30px;
@@ -144,7 +136,8 @@ $list: 0;
       left: 0;
       opacity: 1;
       background-color: rgba(0, 0, 0, 0.2);
-      @include transition(padding 0.2s ease-out, $opacity-transition);
+      color: rgba(255, 255, 255, 1);
+      @include transition(color 0.2s ease-in, padding 0.2s ease-out, $opacity-transition);
     }
 
   }

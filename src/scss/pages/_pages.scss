@@ -42,13 +42,13 @@
 .white-page {
   background-color: #F2F2F2;
   @media#{$small-only} {
-    padding: 90px 10px 20px 10px;
+    padding: 20px 10px 20px 10px;
     margin-top: 10px;
     height: 100%;
     width: 100%;
   }
   @media #{$medium-up} {
-    padding: 90px 30px 30px 30px;
+    padding: 30px 30px 30px 30px;
     height: 100%;
     width: 100%;
     visibility: visible;
@@ -77,18 +77,18 @@
   opacity: 0;
 
   @media #{$small-only} {
-    position: absolute;
+    //position: absolute;
+    float:right;
     right: 0;
     z-index: 2;
-    margin-top: -70px;
-    margin-right: 20px;
+
     stroke-width: 10;
   }
   @media #{$medium-up} {
-    position: absolute;
+    //position: absolute;
     top: 0;
-    margin-top: 40px;
-    margin-right: 55px;
+    //margin-top: 40px;
+    //margin-right: 55px;
     right: 0;
     float: right;
     z-index: 1000;
@@ -110,21 +110,18 @@
     fill: #707070;
     stroke-width:0;
     stroke: #707070;
-    //position: fixed;
-    margin-right: 20px;
   }
 
 }
 
 .page-title {
-  left:0;
-  top:0;
-  padding-left:50px;
-  padding-top: 40px;
+  left: 0;
+  top: 0;
   font-family: "HelveticaNeue-Light", "Helvetica", "Arial";
   font-weight: bold;
   font-size: 45px;
-  position: absolute;
+  padding-bottom: 10px;
+
 }
 //.block.active h1 {
 //  //position: absolute;

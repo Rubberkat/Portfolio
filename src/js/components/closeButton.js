@@ -2,15 +2,16 @@ var $ = require('jquery');
 
 
 $('.close-button svg').click(function (e) {
+    e.preventDefault();
     var block = $('.block');
 
-    $(block).not(this).css('display', 'block');
-    $(block).removeClass('active');
+    block.not(this).css('display', 'block');
+    block.removeClass('active');
 
-    // $('html, body').animate({
-    //     scrollTop: $('.block').offset().top - 20
-    // }, 'slow');
-
+    block.css('transition', '');
+    $('.page-container').css('transition', '');
+    window.location.hash = "";
+    location.hash.replace('#', '');
     e.stopPropagation();
 });
 
