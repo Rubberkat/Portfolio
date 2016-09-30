@@ -34,7 +34,12 @@ $(window).on('popstate', function (e) {
             block.each(function () {
                 if (window.location.hash === $(this).attr('id')) {
                     $(this).addClass('active');
-
+                    if ($(window).width() < 850) {
+                        block.not(this).removeClass('active');
+                        $('html, body').animate({
+                            scrollTop: $(this).offset().top
+                        }, 100);
+                    }
                 }
             });
         }
