@@ -31,7 +31,7 @@ block.click(function () {
 
     $('html, body').animate({
         scrollTop: $this.offset().top
-    }, 100);
+    }, 0);
 });
 
 
