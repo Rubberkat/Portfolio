@@ -5,13 +5,17 @@ var block = $('.block');
 $(document).ready(function () {
     var hash = window.location.hash;
 
-    block.each(function () {
-        if (hash === $(this).attr('id')) {
-            $(this).addClass('active');
-            $(this).css('transition', 'none');
-            $('.page-container').css('transition', 'none');
-        }
-    });
+    if (hash === '') {
+        history.replaceState(null, null, ' ');
+    } else {
+        block.each(function () {
+            if (hash === $(this).attr('id')) {
+                $(this).addClass('active');
+                $(this).css('transition', 'none');
+                $('.page-container').css('transition', 'none');
+            }
+        });
+    }
 });
 
 
@@ -29,7 +33,6 @@ $(window).on('popstate', function (e) {
             block.removeClass('active');
             block.css('transition', '');
             $('.page-container').css('transition', '');
-            window.location.hash = '';
             history.replaceState(null, null, ' ');
 
         } else {

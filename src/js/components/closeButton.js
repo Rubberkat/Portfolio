@@ -6,9 +6,7 @@ function closeButton() {
     block.removeClass('active');
     $('.block, .page-container').css('transition', '');
 
-    window.location.hash = "";
-    document.title = "";
-    history.replaceState(null, null, ' ');
+    history.pushState(null, null, ' ');
 }
 
 $('.close-button').click(function (e) {
