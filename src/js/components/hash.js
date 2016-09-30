@@ -29,13 +29,15 @@ $(window).on('popstate', function (e) {
             block.removeClass('active');
             block.css('transition', '');
             $('.page-container').css('transition', '');
+            window.location.hash = '';
+            history.replaceState(null, null, ' ');
 
         } else {
             block.each(function () {
                 if (window.location.hash === $(this).attr('id')) {
                     $(this).addClass('active');
+                    block.not(this).removeClass('active');
                     if ($(window).width() < 850) {
-                        block.not(this).removeClass('active');
                         $('html, body').animate({
                             scrollTop: $(this).offset().top
                         }, 100);
