@@ -12,14 +12,14 @@
     display: none;
   }
   @media #{$medium-up} {
-    top: 300vh;
+    top: 200vh;
     min-height: 600px;
     height: 100vh;
     padding: 20px 20px 20px 20px;
     position: absolute;
 
     width: 100vw;
-    @include transition(all 0.3s ease-in);
+    @include transition(all 0.5s ease-out);
   }
 }
 
@@ -58,7 +58,7 @@
 
 .block.active .white-page {
   background-color: #F2F2F2;
-  //@include transition(all 0.6s ease-in);
+
   @media#{$small-only} {
     margin-top: 10px;
   }
@@ -68,27 +68,29 @@
 
 }
 
+.close-button {
+  width: 60px;
+  height:60px;
+  float: right;
+  border-radius: 50%;
+}
+
 .close-button svg {
   cursor: pointer;
   fill: #D9D9D9;
   width: 60px;
   height: 60px;
+  border-radius: 50%;
   visibility: hidden;
   opacity: 0;
-
   @media #{$small-only} {
-    //position: absolute;
     float:right;
     right: 0;
     z-index: 2;
-
     stroke-width: 10;
   }
   @media #{$medium-up} {
-    //position: absolute;
     top: 0;
-    //margin-top: 40px;
-    //margin-right: 55px;
     right: 0;
     float: right;
     z-index: 1000;
@@ -97,9 +99,9 @@
       fill: #707070;
       stroke: #707070;
       stroke-width: 10;
-
     }
   }
+
 }
 
 .block.active .close-button svg {
@@ -117,7 +119,7 @@
 .page-title {
   left: 0;
   top: 0;
-  font-family: "HelveticaNeue-Light", "Helvetica", "Arial";
+  font-family: $title-font;
   font-weight: bold;
   font-size: 45px;
   padding-bottom: 10px;

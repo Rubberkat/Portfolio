@@ -9,7 +9,6 @@ $list: 0;
   }
 }
 
-
 .row {
   @include row();
   .block {
@@ -26,12 +25,18 @@ $list: 0;
       .bottom-text {
         position: absolute;
         bottom: 0;
-        padding-bottom: 50px;
+        padding-left: 15px;
+
+        padding-bottom: 30px;
         visibility: visible;
 
       }
       .expand svg {
         fill: rgba(255, 255, 255, 1);
+        bottom: 0;
+        position: absolute;
+        margin-bottom: 33px;
+        @include transform(rotate(270deg));
       }
     }
     @media #{$medium-up} {
@@ -42,7 +47,7 @@ $list: 0;
       display: inline-block;
       min-height: 500px;
       z-index: -1;
-      @include transition(left 0.2s ease-in 0.3s, width 0.2s ease-in 0.3s, z-index 0.2s ease-in 0.3s);
+      @include transition(left 0.2s ease-out 0.3s, width 0.2s ease-out 0.3s, z-index 0.2s ease-out 0.3s);
       p {
         opacity: 1;
         color: rgba(255, 255, 255, 0.2);
@@ -53,7 +58,7 @@ $list: 0;
         opacity: 1;
       }
       .bottom-text {
-        padding: 0 0 30px 30px;
+        padding: 0 0 30px 45px;
         width: 100%;
         left: 0;
         opacity: 1;
@@ -61,15 +66,22 @@ $list: 0;
         bottom: 0;
         position: absolute;
         visibility: visible;
+        @include transition(color 0.2s ease-in, padding-top 0.2s ease-in, background-color 0.2s ease-out, $opacity-transition);
 
-        @include transition(color 0.2s ease-in, padding 0.2s ease-in, background-color 0.2s ease-out, $opacity-transition);
-
+      }
+      .expand svg {
+        bottom: 0;
+        position: absolute;
+        margin-bottom: 33px;
+        fill: rgba(255, 255, 255, 0.4);
+        @include transform(rotate(270deg));
+        @include transition(fill 0.2s ease-out, $opacity-transition);
       }
     }
   }
 }
 
- h1, .expand svg {
+h1, .expand svg {
   @media #{$medium-up} {
     opacity: 1;
     @include transition($opacity-transition);
@@ -83,10 +95,10 @@ $list: 0;
   cursor: auto;
   overflow: hidden;
 
-  @include transition(left 0.2s ease-in, width 0.2s ease-in, z-index 0.1s ease-in);
+  @include transition(left 0.3s ease-out, width 0.3s ease-out, z-index 0.1s ease-in);
   @media #{$small-only} {
     height: 100%;
-    h1, p {
+    h1, p, .bottom-text, .expand svg {
       display: none;
     }
   }
@@ -114,7 +126,7 @@ $list: 0;
 }
 
 .block.hover.active, .block.active.hover {
-  p, .bottom-text {
+  p, .bottom-text, .expand svg {
     opacity: 0;
     @include transition(opacity 0s ease-in);
   }
@@ -127,22 +139,20 @@ $list: 0;
     p, .expand svg {
       color: rgba(255, 255, 255, 1);
       fill: rgba(255, 255, 255, 1);
-
-      @include transition(color 0.2s ease-in, fill 0.2s ease-out, $opacity-transition);
+      @include transition(color 0.2s ease-in, fill 0.2s ease-in, $opacity-transition);
     }
     .bottom-text {
-      padding: 30px 0 30px 30px;
+      padding-top: 30px;
       width: 100%;
       left: 0;
       opacity: 1;
       background-color: rgba(0, 0, 0, 0.2);
       color: rgba(255, 255, 255, 1);
-      @include transition(color 0.2s ease-in, padding 0.2s ease-out, $opacity-transition);
+      @include transition(color 0.2s ease-in, padding-top 0.2s ease-out, $opacity-transition);
     }
 
   }
 }
-
 
 .block.no-hover::before {
   @media #{$medium-up} {
@@ -152,12 +162,7 @@ $list: 0;
   }
 }
 
-.expand svg {
-  @include transition(all 0.2s ease-out);
-  fill: rgba(255, 255, 255, 0.4);
-  bottom: 0;
-  @include transform(rotate(270deg))
-}
+
 
 
 

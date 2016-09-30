@@ -1,17 +1,23 @@
 var $ = require('jquery');
 
-
-$('.close-button svg').click(function (e) {
-    e.preventDefault();
+function closeButton() {
     var block = $('.block');
 
-    block.not(this).css('display', 'block');
     block.removeClass('active');
-
-    block.css('transition', '');
-    $('.page-container').css('transition', '');
+    $('.block, .page-container').css('transition', '');
     window.location.hash = "";
-    location.hash.replace('#', '');
+    document.title = "";
+}
+
+$('.close-button').click(function (e) {
+    var block = $('.block');
+    closeButton();
     e.stopPropagation();
+});
+
+$(document).keydown(function (e) {
+    if (e.keyCode === 27) {
+        closeButton();
+    }
 });
 
