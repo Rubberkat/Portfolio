@@ -6,7 +6,7 @@ function closeButton() {
     block.removeClass('active');
     $('.block, .page-container').css('transition', '');
 
-    history.pushState(null, null, ' ');
+    history.replaceState(null, null, ' ');
 }
 
 $('.close-button').click(function (e) {
