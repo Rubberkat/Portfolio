@@ -1,7 +1,7 @@
 var $ = require('jquery');
+var block = $('.block');
 
 function closeButton() {
-    var block = $('.block');
 
     block.removeClass('active');
     $('.block, .page-container').css('transition', '');
@@ -14,8 +14,11 @@ $('.close-button').click(function (e) {
 });
 
 $(document).keydown(function (e) {
+
     if (e.keyCode === 27) {
-        closeButton();
+        if (block.hasClass('active')) {
+            closeButton();
+        }
     }
 });
 
