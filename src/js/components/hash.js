@@ -33,7 +33,8 @@ $(window).on('popstate', function (e) {
             block.removeClass('active');
             block.css('transition', '');
             $('.page-container').css('transition', '');
-            history.replaceState(null, null, ' ');
+            history.pushState(null, null, ' ');
+
 
         } else {
             block.each(function () {
