@@ -5,12 +5,10 @@ function closeButton() {
 
     block.removeClass('active');
     $('.block, .page-container').css('transition', '');
-
-    history.replaceState(null, null, ' ');
+    history.pushState(null, null, ' ');
 }
 
 $('.close-button').click(function (e) {
-    var block = $('.block');
     closeButton();
     e.stopPropagation();
 });

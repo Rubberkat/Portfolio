@@ -15,11 +15,19 @@ $(document).ready(function () {
 });
 
 
-block.hover(function () {
+block.mouseover(function () {
     var $this = $(this);
 
-    $this.toggleClass("hover");
-    block.not($this).toggleClass("no-hover");
+    $this.addClass('hover');
+    block.not($this).addClass('no-hover');
+
+    block.mouseleave(function () {
+        $this.removeClass('hover');
+        block.not($this).removeClass('no-hover');
+    })
+
+
+
 });
 
 

@@ -10,6 +10,7 @@ $(document).ready(function () {
     } else {
         block.each(function () {
             if (hash === $(this).attr('id')) {
+                history.pushState(null, null, $(this).attr('id'));
                 $(this).addClass('active');
                 $(this).css('transition', 'none');
                 $('.page-container').css('transition', 'none');
@@ -33,7 +34,7 @@ $(window).on('popstate', function (e) {
             block.removeClass('active');
             block.css('transition', '');
             $('.page-container').css('transition', '');
-            history.pushState(null, null, ' ');
+            history.replaceState(null, null, ' ');
 
 
         } else {
