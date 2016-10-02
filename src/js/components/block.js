@@ -27,7 +27,6 @@ block.mouseover(function () {
     })
 
 
-
 });
 
 
@@ -37,9 +36,12 @@ block.click(function () {
     $this.addClass('active');
     block.not(this).removeClass('active');
 
-    $('html, body').animate({
-        scrollTop: $this.offset().top
-    }, 0);
+    if (screen.width < 850) {
+        $('html, body').animate({
+            scrollTop: $this.offset().top
+        }, 0);
+        block.not(this).css('display', 'none');
+    }
 });
 
 
