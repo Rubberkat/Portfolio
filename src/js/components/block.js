@@ -35,7 +35,7 @@ block.click(function () {
 
     $this.addClass('active');
     block.not(this).removeClass('active');
-
+    $(this).css('cursor', 'auto');
     if (screen.width < 850) {
         $('html, body').animate({
             scrollTop: $this.offset().top

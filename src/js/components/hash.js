@@ -42,6 +42,7 @@ $(window).on('popstate', function (e) {
             block.each(function () {
                 if (window.location.hash === $(this).attr('id')) {
                     $(this).addClass('active');
+                    $(this).css('cursor', 'auto');
                     block.not(this).removeClass('active');
                     if ($(this).hasClass('no-hover')) {
                         $(this).removeClass('no-hover');

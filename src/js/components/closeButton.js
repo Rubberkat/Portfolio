@@ -5,6 +5,7 @@ function closeButton() {
 
     block.removeClass('active');
     $('.block, .page-container').css('transition', '');
+    block.css('cursor', 'pointer');
     history.pushState(null, null, ' ');
     if (screen.width < 850) {
         block.css('display', 'block');
