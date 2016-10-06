@@ -36,6 +36,7 @@ $(window).on('popstate', function (e) {
         if (window.location.hash === '') {
             block.removeClass('active');
             block.css('transition', '');
+            block.css('cursor', 'pointer');
             $('.page-container').css('transition', '');
             history.replaceState(null, null, ' ');
         } else {
