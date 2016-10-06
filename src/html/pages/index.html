@@ -7,97 +7,94 @@
 {% block content %}
 
     <div class="row">
-
-        <div class="block-container">
-
-            <div class="block" id="#about">
-                <div class="block-content">
-                    <h1>About</h1>
-                    <p>
-                        Hey there! My name is Roy de Jager. If you want I can tell more about me? Click here to hear
-                        more
-                        about
-                        me!
-                    </p>
-                    {% include 'partials/expand.html' %}
-                    <div class="bottom-text">
-                        CLICK TO EXPAND
-                    </div>
-                </div>
-                <div class="page-container">
-                    <div class="white-page">
-
-                        {% include 'content/about.html' %}
-                    </div>
+        <div class="block" id="#about">
+            <div class="block-content">
+                <h1>About</h1>
+                <p>
+                    Hey there! My name is Roy de Jager. If you want I can tell more about me? Click here to hear
+                    more
+                    about
+                    me!
+                </p>
+                {% include 'partials/expand.html' %}
+                <div class="bottom-text">
+                    CLICK TO EXPAND
                 </div>
             </div>
+            <div class="page-container">
+                <div class="white-page">
 
-
-            <div class="block" id="#works">
-                <div class="block-content">
-                    <h1>Works</h1>
-                    <p>
-                        This will show you all the works I have created so far. You can also check out my github for the code of some of
-                        my projects.
-
-                    </p>
-                    {% include 'partials/expand.html' %}
-                    <div class="bottom-text">
-                        CLICK TO EXPAND
-                    </div>
-                </div>
-                <div class="page-container">
-                    <div class="white-page">
-
-                        {% include 'content/works.html' %}
-                    </div>
+                    {% include 'content/about.html' %}
                 </div>
             </div>
+        </div>
 
 
-            <div class="block" id="#skills">
-                <div class="block-content">
-                    <h1>
-                        Skills
-                    </h1>
-                    <p>
-                        Want to see what I can do besides drinking coffee? This will show you all the skills I posses to
-                        make awesome websites. Click on me to see!
-                    </p>
-                    {% include 'partials/expand.html' %}
-                    <div class="bottom-text">
-                        CLICK TO EXPAND
-                    </div>
-                </div>
-                <div class="page-container">
-                    <div class="white-page">
+        <div class="block" id="#works">
+            <div class="block-content">
+                <h1>Works</h1>
+                <p>
+                    This will show you all the works I have created so far. You can also check out my github for the
+                    code of some of
+                    my projects.
 
-                        {% include 'content/skills.html' %}
-                    </div>
+                </p>
+                {% include 'partials/expand.html' %}
+                <div class="bottom-text">
+                    CLICK TO EXPAND
                 </div>
             </div>
+            <div class="page-container">
+                <div class="white-page">
 
-
-            <div class="block" id="#contact">
-                <div class="block-content">
-                    <h1>
-                        Contact
-                    </h1>
-                    <p>
-                        Did you like what you saw? If you want I can show you how to contact me. Just click and
-                        you'll see
-                        how. Looking forward to hear from you!
-                    </p>
-                    {% include 'partials/expand.html' %}
-                    <div class="bottom-text">
-                        CLICK TO EXPAND
-                    </div>
+                    {% include 'content/works.html' %}
                 </div>
-                <div class="page-container">
-                    <div class="white-page">
+            </div>
+        </div>
 
-                        {% include 'content/contact.html' %}
-                    </div>
+
+        <div class="block" id="#skills">
+            <div class="block-content">
+                <h1>
+                    Skills
+                </h1>
+                <p>
+                    Want to see what I can do besides drinking coffee? This will show you all the skills I posses to
+                    make awesome websites. Click on me to see!
+                </p>
+                {% include 'partials/expand.html' %}
+                <div class="bottom-text">
+                    CLICK TO EXPAND
+                </div>
+            </div>
+            <div class="page-container">
+                <div class="white-page">
+
+                    {% include 'content/skills.html' %}
+                </div>
+            </div>
+        </div>
+
+
+        <div class="block" id="#contact">
+            <div class="block-content">
+                <h1>
+                    Contact
+                </h1>
+                <p>
+                    Did you like what you saw? If you want I can show you how to contact me. Just click and
+                    you'll see
+                    how. Looking forward to hear from you!
+                </p>
+                {% include 'partials/expand.html' %}
+                <div class="bottom-text">
+                    CLICK TO EXPAND
+                </div>
+            </div>
+            <div class="page-container">
+                <div class="white-page">
+
+                    {% include 'content/contact.html' %}
                 </div>
             </div>
         </div>

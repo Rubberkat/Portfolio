@@ -6,9 +6,9 @@
   @media #{$small-only} {
     margin-top: -30px;
     margin-left: -10px;
-    padding: 110vh 20px 10px 0px;
+    padding: 110vh 20px 10px 0;
     visibility: hidden;
-    @include transition(padding-top 0.3s ease-out);
+    @include transition(padding-top 0.3s ease-out, visibility 0s ease 0.3s);
   }
   @media #{$medium-up} {
     top: 200vh;
@@ -16,7 +16,6 @@
     height: 100vh;
     padding: 20px 20px 20px 20px;
     position: absolute;
-
     width: 100vw;
     @include transition(all 0.5s ease-out);
   }
@@ -26,7 +25,7 @@
   visibility: visible;
   @media #{$small-only} {
     padding-top: 10px;
-    @include transition(all 0.3s ease-in 0.2s);
+    @include transition(padding-top 0.3s ease-in 0.2s);
   }
   @media #{$medium-up} {
     top: 0;

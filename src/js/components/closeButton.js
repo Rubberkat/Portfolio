@@ -20,8 +20,8 @@ $('.close-button').click(function (e) {
 
 $(document).keydown(function (e) {
 
-    if (e.keyCode === 27) {
-        if (block.hasClass('active')) {
+    if (block.hasClass('active')) {
+        if (e.keyCode === 27) {
             closeButton();
         }
     }
