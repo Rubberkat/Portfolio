@@ -107,6 +107,7 @@ h1, .expand svg {
   cursor: auto;
   overflow: hidden;
   @media #{$small-only} {
+    min-height: 100vh;
     max-height: 2500px;
     @include transition(max-height 0.4s ease-in);
 

@@ -95,7 +95,8 @@
     stroke-width: 0;
     stroke: #707070;
     border: none;
-    position: fixed;
+    z-index: 500;
+    position: absolute;
   }
 
 }

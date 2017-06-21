@@ -1,7 +1,7 @@
 var $ = require('jquery');
 
 var block = $('.block');
-
+var activePage = '';
 
 $(document).ready(function () {
     var colors = ["#3b2857", '#00A36D', '#008E99', '#dfa907', '#D6762E', '#6E2D27', '#004166'];
@@ -15,6 +15,7 @@ $(document).ready(function () {
 });
 
 
+
 block.mouseover(function () {
     var $this = $(this);
 
@@ -25,8 +26,6 @@ block.mouseover(function () {
         $this.removeClass('hover');
         block.not($this).removeClass('no-hover');
     })
-
-
 });
 
 
@@ -41,8 +40,12 @@ block.click(function () {
             scrollTop: $this.offset().top
         }, 0);
         block.not(this).css('display', 'none');
+        activePage = $(this).attr('id');
+
     }
 });
+
+
 
 
 

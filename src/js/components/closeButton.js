@@ -1,5 +1,6 @@
 var $ = require('jquery');
 var block = $('.block');
+// var activePage = '';
 
 function closeButton() {
 
@@ -12,19 +13,32 @@ function closeButton() {
     }
 }
 
-$('.close-button').click(function (e) {
-
-    closeButton();
-    e.stopPropagation();
+block.click(function () {
+    activePage = $(this).attr('id');
+    console.log(activePage);
 });
 
+// function scrollTo() {
+//     if (screen.width < 850) {
+//         $('html, body').animate({
+//             scrollTop: activePage.offset().top
+//         }, 0);
+//     }
+    $('.close-button').click(function (e) {
 
-$(document).keydown(function (e) {
+        closeButton();
+        e.stopPropagation();
+    });
 
-    if (block.hasClass('active')) {
-        if (e.keyCode === 27) {
-            closeButton();
+
+
+
+    $(document).keydown(function (e) {
+
+        if (block.hasClass('active')) {
+            if (e.keyCode === 27) {
+                closeButton();
+            }
         }
-    }
-});
+    });
 
